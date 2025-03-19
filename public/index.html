@@ -26,12 +26,33 @@
                 margin: 0;
                 padding: 0;
             }
+            label{
+                font-family: "Noto Sans SC";
+            }
+            #question-options{
+                margin: auto;
+                text-align: center;
+            }
         </style>
     </head>
     <body>
         <h1 style="margin: auto; text-align: center;">Generate Math Worksheets for printing</h1>
         <div id="generation-box">
-
+            <div id="question-options">
+                <p>Choose the question types you want to generate: </p>
+                <form>
+                    <input type="checkbox" id="add">
+                    <label for="add">Addition</label>
+                    <input type="checkbox" id="subtrt">
+                    <label for="subtrt">Subtraction</label>
+                    <input type="checkbox" id="mult">
+                    <label for="mult">Multiplication</label>
+                    <input type="checkbox" id="divid">
+                    <label for="divid">Division</label>
+                    <input type="checkbox" id="root">
+                    <label for="root">Root</label>
+                </form>
+            </div>
         </div>
         <script src="script.js"></script>
     </body>
