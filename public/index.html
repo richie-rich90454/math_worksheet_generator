@@ -41,24 +41,41 @@
             <div id="question-options">
                 <p>Choose the question types you want to generate: </p>
                 <form id="question-type-group">
-                    <input type="checkbox" id="add">
+                    <input type="checkbox" id="add" value="add" name="question-type">
                     <label for="add">Addition</label>
-                    <input type="checkbox" id="subtrt">
+                    <input type="checkbox" id="subtrt" value="subtrt" name="question-type">
                     <label for="subtrt">Subtraction</label>
-                    <input type="checkbox" id="mult">
+                    <input type="checkbox" id="mult" value="mult" name="question-type">
                     <label for="mult">Multiplication</label>
-                    <input type="checkbox" id="divid">
+                    <input type="checkbox" id="divid" value="divid" name="question-type">
                     <label for="divid">Division</label>
-                    <input type="checkbox" id="root">
+                    <input type="checkbox" id="root" value="root" name="question-type">
                     <label for="root">Root</label>
                 </form>
                 <div id="question-number-group">
-                    <p>Enter the amount of question</p>
+                    <p>Enter the amount of questions</p>
                     <input type="number" placeholder="Enter here">
                     <div>
-                        <input type="checkbox" id="is-shuffle-questions" value="Shuffle Questions?">
-                        <label for="is-shuffle-questions">Shuffle Questions?</label>
+                        <input type="checkbox" id="is-shuffle-questions" name="worksheet-related" value="shuf-que">
+                        <label for="is-shuffle-questions">Shuffle question order?</label>
+                        <input type="checkbox" id="is-generate-answers" name="worksheet-related" value="gen-ans">
+                        <label for="is-generate-answers">Generate answer?</label>
                     </div>
+                </div>
+                <div id="file-group">
+                    <p>Choose the formats you want to get this worksheet in:</p>
+                    <form id="file-options">
+                        <input type="checkbox" id="pdf" value="pdf" name="file-type">
+                        <label for="pdf">.pdf</label>
+                        <input type="checkbox" id="docx" value="docx" name="file-type">
+                        <label for="pdf">.docx</label>
+                        <input type="checkbox" id="doc" value="doc" name="file-type">
+                        <label for="pdf">.doc</label>
+                        <input type="checkbox" id="txt" value="txt" name="file-type">
+                        <label for="pdf">.txt</label>
+                        <input type="checkbox" id="tex" value="tex" name="file-type">
+                        <label for="pdf">.tex</label>
+                    </form>
                 </div>
                 <div>
                     <input type="button" id="qgen" value="Next">
