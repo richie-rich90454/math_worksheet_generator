@@ -40,7 +40,7 @@
         <div id="generation-box">
             <div id="question-options">
                 <p>Choose the question types you want to generate: </p>
-                <form>
+                <form id="question-type-group">
                     <input type="checkbox" id="add">
                     <label for="add">Addition</label>
                     <input type="checkbox" id="subtrt">
@@ -52,6 +52,17 @@
                     <input type="checkbox" id="root">
                     <label for="root">Root</label>
                 </form>
+                <div id="question-number-group">
+                    <p>Enter the amount of question</p>
+                    <input type="number" placeholder="Enter here">
+                    <div>
+                        <input type="checkbox" id="is-shuffle-questions" value="Shuffle Questions?">
+                        <label for="is-shuffle-questions">Shuffle Questions?</label>
+                    </div>
+                </div>
+                <div>
+                    <input type="button" id="qgen" value="Next">
+                </div>
             </div>
         </div>
         <script src="script.js"></script>
