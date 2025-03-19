@@ -52,7 +52,7 @@
                     <input type="checkbox" id="root" value="root" name="question-type">
                     <label for="root">Root</label>
                 </form>
-                <div id="question-number-group">
+                <div id="question-number-group" style="display: none;">
                     <p>Enter the amount of questions</p>
                     <input type="number" placeholder="Enter here">
                     <div>
@@ -62,7 +62,7 @@
                         <label for="is-generate-answers">Generate answer?</label>
                     </div>
                 </div>
-                <div id="file-group">
+                <div id="file-group" style="display: none;">
                     <p>Choose the formats you want to get this worksheet in:</p>
                     <form id="file-options">
                         <input type="checkbox" id="pdf" value="pdf" name="file-type">
@@ -76,6 +76,14 @@
                         <input type="checkbox" id="tex" value="tex" name="file-type">
                         <label for="pdf">.tex</label>
                     </form>
+                </div>
+                <div id="font-type" style="display: none;">
+                    <div>
+                        <p>Upload the font you want to have the worksheet in </p>
+                        <p>If nothing is uploaded, then the worksheet would be generated with the default font: </p>
+                    </div>
+                    <input type="file" id="font-file" name="font-file" accept=".ttf, .otf">
+                    <p>Click "Next" if you do not want to customize your font</p>
                 </div>
                 <div>
                     <input type="button" id="qgen" value="Next">
