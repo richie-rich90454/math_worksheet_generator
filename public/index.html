@@ -33,6 +33,59 @@
                 margin: auto;
                 text-align: center;
             }
+            input{
+                font-family: "Noto Sans SC";
+            }
+            input[type="button"]{
+                background-color: #FFF;
+                border: 1px solid #000;
+                border-radius: .223rem;
+                cursor: pointer;
+            }
+            input[type="button"]:hover{
+                transform: scale(1.1);
+            }
+            input[type="checkbox"]{
+                appearance: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                width: 1.2rem;
+                height: 1.2rem;
+                border: 2px solid #000;
+                border-radius: .45rem;
+                position: relative;
+                vertical-align: middle;
+                margin-right: .8rem;
+                cursor: pointer;
+            }
+            input[type="checkbox"]:checked{
+                color: #DE0000;
+                border-color: #DE0000;
+            }
+            input[type="checkbox"]:checked::before{
+                content: "✓";
+                position: absolute;
+                color: #000;
+                top: -35%;
+                left: 10%;
+                font-size: 1.1rem;
+            }
+            input[type="checkbox"]:hover{
+                background-color: #FCD600;
+            }
+            .checkbox-wrapper{
+                border: 1px solid #000;
+                max-width: max-content;
+                text-align-last: center;
+                border-radius: .45rem;
+                display: inline-block;
+            }
+            label{
+                cursor: pointer;
+            }
+            .checkbox-wrapper:hover{
+                background-color: #FCD600;
+            }
         </style>
     </head>
     <body>
@@ -40,18 +93,30 @@
         <div id="generation-box">
             <div id="question-options">
                 <p>Choose the question types you want to generate: </p>
-                <form id="question-type-group">
-                    <input type="checkbox" id="add" value="add" name="question-type">
-                    <label for="add">Addition</label>
-                    <input type="checkbox" id="subtrt" value="subtrt" name="question-type">
-                    <label for="subtrt">Subtraction</label>
-                    <input type="checkbox" id="mult" value="mult" name="question-type">
-                    <label for="mult">Multiplication</label>
-                    <input type="checkbox" id="divid" value="divid" name="question-type">
-                    <label for="divid">Division</label>
-                    <input type="checkbox" id="root" value="root" name="question-type">
-                    <label for="root">Root</label>
-                </form>
+                <div class="form-wrapper">
+                    <form id="question-type-group">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="add" value="add" name="question-type">
+                            <label for="add">Addition</label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="subtrt" value="subtrt" name="question-type">
+                            <label for="subtrt">Subtraction</label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="mult" value="mult" name="question-type">
+                            <label for="mult">Multiplication</label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="divid" value="divid" name="question-type">
+                            <label for="divid">Division</label>
+                        </div>
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="root" value="root" name="question-type">
+                            <label for="root">Root</label>
+                        </div>
+                    </form>
+                </div>
                 <div id="question-number-group" style="display: none;">
                     <p>Enter the amount of questions</p>
                     <input type="number" placeholder="Enter here">
