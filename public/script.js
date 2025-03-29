@@ -47,13 +47,13 @@ function shuffleArray(array){
     }
 }
 function generateProblems(types, total){
-    letproblems=[];
+    let problems=[];
     let numPerType=Math.floor(total/types.length);
     let remainder=total%types.length;
     types.forEach((type, index)=>{
         let num=numPerType+(index<remainder?1:0);
         for (let i=0; i<num; i++){
-            letproblem;
+            let problem;
             switch (type){
                 case 'add':
                     problem=generateAddition();
@@ -74,10 +74,10 @@ function generateProblems(types, total){
            problems.push(problem);
         }
     });
-    returnproblems;
+    return problems;
 }
 function generateWorksheet(){
-    letproblems=generateProblems(userInputs.questionTypes, userInputs.numQuestions);
+    let problems=generateProblems(userInputs.questionTypes, userInputs.numQuestions);
     if (userInputs.shuffle){
         shuffleArray(problems);
     }
